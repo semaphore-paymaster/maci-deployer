@@ -64,6 +64,7 @@ jobs:
         env:
           ETH_SK: ${{ secrets.ETH_SK }}
           SEPOLIA_RPC_URL: ${{ secrets.SEPOLIA_RPC_URL }}
+          ETH_ETHERSCAN_API_KEY: ${{ secrets.ETH_ETHERSCAN_API_KEY }}
 
       - name: Deploy MACI Poll Contract
         run: |
@@ -72,5 +73,6 @@ jobs:
         env:
           ETH_SK: ${{ secrets.ETH_SK }}
           SEPOLIA_RPC_URL: ${{ secrets.SEPOLIA_RPC_URL }}
+          ETH_ETHERSCAN_API_KEY: ${{ secrets.ETH_ETHERSCAN_API_KEY }}
 
 
