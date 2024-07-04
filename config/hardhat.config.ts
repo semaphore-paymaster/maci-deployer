@@ -36,7 +36,6 @@ const getCommonNetworkConfig = (networkName: ESupportedChains, chainId: number) 
   blockGasLimit: DEFAULT_BLOCK_GAS_LIMIT,
   gasMultiplier: DEFAULT_GAS_MUL,
   gasPrice: process.env.GAS_PRICE ? Number(process.env.GAS_PRICE) : NETWORKS_DEFAULT_GAS[networkName],
-  saveDeployments: true,
   chainId,
   accounts: [process.env.ETH_SK || ""],
 });
