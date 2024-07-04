@@ -16,6 +16,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          path: "maci-deployer"
+
+      - uses: actions/checkout@v4
+        with:
           repository: "privacy-scaling-explorations/maci"
           ref: "dev"
           path: "maci"
@@ -42,7 +46,7 @@ jobs:
 
       - name: Build
         run: |
-          mv ${{ github.workspace }}/config/hardhat.config.ts maci/contracts/hardhat.config.ts
+          mv ${{ github.workspace }}/maci-deployer/config/hardhat.config.ts maci/contracts/hardhat.config.ts
 
           cd maci
           pnpm build
@@ -50,7 +54,7 @@ jobs:
 
       - name: Deploy MACI Contracts
         run: |
-          mv ${{ github.workspace }}/config/deploy-config.json maci/contracts/deploy-config.json
+          mv ${{ github.workspace }}/maci-deployer/config/deploy-config.json maci/contracts/deploy-config.json
 
           cd maci/contracts
           pnpm deploy:sepolia
