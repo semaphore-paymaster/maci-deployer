@@ -1,0 +1,38 @@
+{
+    "sepolia": {
+      "ConstantInitialVoiceCreditProxy": {
+        "deploy": true,
+        "amount": 99
+      },
+      "SemaphoreGatekeeper": {
+        "deploy": true,
+        "semaphoreContract": "0x0A09FB3f63c13F1C54F2fA41AFB1e7a98cffc774",
+        "groupId": 0
+      },
+      "MACI": {
+        "stateTreeDepth": 10,
+        "gatekeeper": "SemaphoreGatekeeper"
+      },
+      "VkRegistry": {
+        "stateTreeDepth": 10,
+        "intStateTreeDepth": 1,
+        "messageTreeDepth": 2,
+        "voteOptionTreeDepth": 2,
+        "messageBatchDepth": 1,
+        "zkeys": {
+          "qv": {
+            "processMessagesZkey": "../cli/zkeys/ProcessMessages_10-2-1-2_test/ProcessMessages_10-2-1-2_test.0.zkey",
+            "tallyVotesZkey": "../cli/zkeys/TallyVotes_10-1-2_test/TallyVotes_10-1-2_test.0.zkey",
+            "processWasm": "../cli/zkeys/ProcessMessages_10-2-1-2_test/ProcessMessages_10-2-1-2_test_js/ProcessMessages_10-2-1-2_test.wasm",
+            "tallyWasm": "../cli/zkeys/TallyVotes_10-1-2_test/TallyVotes_10-1-2_test_js/TallyVotes_10-1-2_test.wasm"
+          }
+        }
+      },
+      "Poll": {
+        "pollDuration": 3600,
+        "coordinatorPubkey": "macipk.9a59264310d95cfd8eb7083aebeba221b5c26e77427f12b7c0f50bc1cc35e621",
+        "useQuadraticVoting": true
+      }
+    }
+  }
+  
