@@ -26,7 +26,7 @@ import { NetworkUserConfig } from "hardhat/types";
 dotenv.config();
 
 const DEFAULT_BLOCK_GAS_LIMIT = 30_000_000;
-const DEFAULT_GAS_MUL = 2;
+const DEFAULT_GAS_MUL = 3;
 const TEST_MNEMONIC = "candy maple cake sugar pudding cream honey rich smooth crumble sweet treat";
 const NETWORKS_RPC_URL = getNetworkRpcUrls();
 const ETHERSCAN_API_KEYS = getEtherscanApiKeys();
@@ -36,6 +36,7 @@ const getCommonNetworkConfig = (networkName: ESupportedChains, chainId: number) 
   blockGasLimit: DEFAULT_BLOCK_GAS_LIMIT,
   gasMultiplier: DEFAULT_GAS_MUL,
   gasPrice: process.env.GAS_PRICE ? Number(process.env.GAS_PRICE) : NETWORKS_DEFAULT_GAS[networkName],
+  saveDeployments: true,
   chainId,
   accounts: [process.env.ETH_SK || ""],
 });
