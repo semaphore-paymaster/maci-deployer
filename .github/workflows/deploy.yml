@@ -50,6 +50,9 @@ jobs:
 
           cd maci
           pnpm build
+        env:
+          ETH_SK: ${{ secrets.ETH_SK }}
+          SEPOLIA_RPC_URL: ${{ secrets.SEPOLIA_RPC_URL }}
 
 
       - name: Deploy MACI Contracts
@@ -62,7 +65,7 @@ jobs:
           ETH_SK: ${{ secrets.ETH_SK }}
           SEPOLIA_RPC_URL: ${{ secrets.SEPOLIA_RPC_URL }}
 
-      - name: Deploy MACI Contracts
+      - name: Deploy MACI Poll Contract
         run: |
           cd maci/contracts
           pnpm deploy-poll:sepolia
