@@ -1,41 +1,6 @@
 maci-deployer
 -------------
 
-GitHub Actions workflow to deploy MACI.
-
-This repository uses the Hardhat tasks in [`maci-contracts`](https://github.com/privacy-scaling-explorations/maci/tree/dev/contracts) to deploy MACI. Configurations in `config/` directory and the GitHub actions workflow in this repository is tailored to deploy in Sepolia network.
-
-## Deploy MACI
-
-### Pre-requisite
-
-Make sure you deployed Semaphore contract and created Semaphore group 
-
-### Deploy
-
-1. Change following values in `configs/deploy-config.json` to set Semaphore gatekeeper:
-
-* SemaphoreGatekeeper.semaphoreContract
-* SemaphoreGatekeeper.groupId
-
-2. Commit change and push the change
-
-3. GitHub Actions will be triggered and deployment will performed
-
-4. You can check the addresses of deployed contract in CI log. (See https://github.com/semaphore-paymaster/maci-deployer/actions/runs/9806497037/job/27078340120#step:9:204 for example)
-
-### GitHub Secrets
-
-make sure you set following GitHub Actions secret :
- * `ETH_SK`: Private key of your Ethereum account
- * `SEPOLIA_RPC_URL`: RPC provider
- * `ETH_ETHERSCAN_API_KEY`: Etherscan API key to verify contract
-
-
-
-maci-deployer
--------------
-
 This repository manages GitHub Actions workflow to deploy MACI with Semaphore gatekeeper into Sepolia network. It uses the Hardhat tasks from [`maci-contracts`](https://github.com/privacy-scaling-explorations/maci/tree/dev/contracts).
 
 ## Deploy MACI
