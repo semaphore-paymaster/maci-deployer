@@ -46,7 +46,7 @@ jobs:
 
       - name: Build
         run: |
-          mv ${{ github.workspace }}/maci-deployer/config/hardhat.config.ts maci/contracts/hardhat.config.ts
+          mv ${{ github.workspace }}/maci-deployer/configs/hardhat.config.ts maci/contracts/hardhat.config.ts
 
           cd maci
           pnpm build
@@ -57,7 +57,7 @@ jobs:
 
       - name: Deploy MACI Contracts
         run: |
-          mv ${{ github.workspace }}/maci-deployer/config/deploy-config.json maci/contracts/deploy-config.json
+          mv ${{ github.workspace }}/maci-deployer/configs/deploy-config.json maci/contracts/deploy-config.json
 
           cd maci/contracts
           pnpm deploy:sepolia --verify
