@@ -13,9 +13,10 @@ This repository manages GitHub Actions workflow to deploy MACI with Semaphore ga
 ### Deployment Steps
 
 1. **Update Configuration**:
-   Modify the following parameters in `configs/deploy-config.json` to configure your Semaphore gatekeeper:
+   Modify the following parameters in `configs/deploy-config.json`:
    - `SemaphoreGatekeeper.semaphoreContract`: Address of the Semaphore contract
    - `SemaphoreGatekeeper.groupId`: ID of the Semaphore group
+   - `Poll.pollDuration`: Duration of poll
 
 2. **Commit and Push**:
    Commit your change and then push them to your repository to trigger the GitHub Actions deployment workflow
