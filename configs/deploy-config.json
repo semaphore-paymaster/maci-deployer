@@ -2,16 +2,19 @@
     "sepolia": {
       "ConstantInitialVoiceCreditProxy": {
         "deploy": true,
-        "amount": 99
+        "amount": 1
+      },
+      "FreeForAllGatekeeper": {
+        "deploy": true
       },
       "SemaphoreGatekeeper": {
-        "deploy": true,
+        "deploy": false,
         "semaphoreContract": "0x0A09FB3f63c13F1C54F2fA41AFB1e7a98cffc774",
         "groupId": 0
       },
       "MACI": {
         "stateTreeDepth": 10,
-        "gatekeeper": "SemaphoreGatekeeper"
+        "gatekeeper": "FreeForAllGatekeeper"
       },
       "VkRegistry": {
         "stateTreeDepth": 10,
