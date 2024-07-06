@@ -76,7 +76,7 @@ jobs:
           ETH_ETHERSCAN_API_KEY: ${{ secrets.ETH_ETHERSCAN_API_KEY }}
 
       - name: Print deployed contracts
-        if: ${{ always }}
+        if: ${{ always() }}
         run: |
           cd maci/contracts
           cat deployed-contracts.json
