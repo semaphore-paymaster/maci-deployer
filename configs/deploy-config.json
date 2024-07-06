@@ -29,7 +29,7 @@
         }
       },
       "Poll": {
-        "pollDuration": 10,
+        "pollDuration": 600,
         "coordinatorPubkey": "macipk.925ba4210043059acb5aebcda6b389b070cffd58e2077e69119db00051550c31",
         "useQuadraticVoting": true
       }
