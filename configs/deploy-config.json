@@ -8,13 +8,13 @@
         "deploy": true
       },
       "SemaphoreGatekeeper": {
-        "deploy": false,
-        "semaphoreContract": "0x0A09FB3f63c13F1C54F2fA41AFB1e7a98cffc774",
-        "groupId": 0
+        "deploy": true,
+        "semaphoreContract": "0x934DeFdBef580f0c2B381DBCbd47e4e2F4078B9C",
+        "groupId": 1
       },
       "MACI": {
         "stateTreeDepth": 10,
-        "gatekeeper": "FreeForAllGatekeeper"
+        "gatekeeper": "SemaphoreGatekeeper"
       },
       "VkRegistry": {
         "stateTreeDepth": 10,
