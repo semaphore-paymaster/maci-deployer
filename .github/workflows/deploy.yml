@@ -42,7 +42,7 @@ jobs:
           cd maci
           pnpm install --frozen-lockfile --prefer-offline
 
-      - name: Dwonload Test Proving Keys
+      - name: Download Test Proving Keys
         run: |
           cd maci
           pnpm download-zkeys:test
@@ -50,6 +50,9 @@ jobs:
       - name: Build
         run: |
           mv ${{ github.workspace }}/maci-deployer/configs/hardhat.config.ts maci/contracts/hardhat.config.ts
+
+          # This SemaphoreGatekeeper removed `msg.sender` requirement to allow transaction sent from ERC-4337 stack
+          mv ${{ github.workspace }}/maci-deployer/SemaphoreGatekeeper.sol maci/contracts/gatekeepers/SemaphoreGatekeeper.sol
 
           cd maci
           pnpm build
